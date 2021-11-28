@@ -9,16 +9,19 @@
 <body>
     <script>
                    var toDoItems = ["one","two","three","four"];
+                
                 function addTodoItemsItem(index, newItem) {
-                    todoItems.splice(2,"six");
+                    todoItems.push("six");
+                    console.log(addTodoItems)
                 }
                 function showList() {
-                    for (var i = 0; i < toDoItems.length; i++) {
+                    for (var i = 0; i < toDoItems.length-1; i++) {
                     console.log(toDoItems[i]);
                     }
                 }
                 function editArray(index, editElement) {
                     toDoItems[index] = editElement;
+                    console.log(editArray)
                 }
                 function markDone(index) {
                     console.log(toDoItems[index] + "✔");
@@ -27,7 +30,7 @@
                     toDoItems.splice(index, "one");
                 }
 
-                editArray("12", "22");
+                editArray(3, "22");
 
                 addTodoItemsItem("six","seven");
                 showList();
